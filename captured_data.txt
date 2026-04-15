@@ -1,0 +1,722 @@
+
+======================================================================
+[+] TIMESTAMP: 2026-04-02 19:39:03
+[+] IP ADDRESS: 192.168.29.40
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "100",
+  "note": "Testing",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-02 19:39:16
+[+] IP ADDRESS: 192.168.29.40
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123456",
+  "amount": "100",
+  "note": "Testing",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  },
+  "timestamp": "2026-04-02 19:39:16"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 00:26:10
+[+] IP ADDRESS: 192.168.29.40
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 00:26:14
+[+] IP ADDRESS: 192.168.29.40
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123457",
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  },
+  "timestamp": "2026-04-03 00:26:14"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 02:09:10
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 26_2_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/147.0.7727.47 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 02:09:12
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 26_2_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/147.0.7727.47 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123465",
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  },
+  "timestamp": "2026-04-03 02:09:12"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 02:14:06
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 02:14:09
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123456",
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  },
+  "timestamp": "2026-04-03 02:14:09"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 15:43:07
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "100",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 15:43:17
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123459",
+  "amount": "100",
+  "note": "",
+  "merchant": {
+    "account": "6915",
+    "bank": "Paytm Payments Bank",
+    "merchant_type": "Verified Merchant",
+    "name": "Geeta Rani",
+    "upi_id": "geeta@paytm"
+  },
+  "timestamp": "2026-04-03 15:43:17"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 16:01:00
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "1000",
+  "note": "Testing",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 16:01:07
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "180254",
+  "amount": "1000",
+  "note": "Testing",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-03 16:01:07"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 18:12:11
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "1000",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 18:12:16
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "124676",
+  "amount": "1000",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-03 18:12:16"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 18:15:48
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 18:36:27
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 18:36:35
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "1000",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 18:36:40
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "454676",
+  "amount": "1000",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-03 18:36:40"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 19:19:14
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "1000",
+  "note": "Test",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 19:19:16
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123457",
+  "amount": "1000",
+  "note": "Test",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-03 19:19:16"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 20:12:12
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 20:12:15
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123654",
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-03 20:12:15"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 20:29:25
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "Testing",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-03 20:29:29
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "189645",
+  "amount": "500",
+  "note": "Testing",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-03 20:29:29"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-07 12:20:48
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500000",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-07 12:20:54
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "235745",
+  "amount": "500000",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-07 12:20:54"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 12:20:10
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 12:20:12
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123644",
+  "amount": "500",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-08 12:20:12"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 12:21:03
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: PHISHING_REPORT
+[+] DATA: {
+  "reported_url": "https://colten-unpropagable-lily.ngrok-free.dev/payment-page",
+  "report_time": "2026-04-08 12:21:03",
+  "reporter_ip": "127.0.0.1"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:03:03
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "50",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:03:10
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "123456",
+  "amount": "50",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-08 16:03:10"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:03:49
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "50",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:03:53
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "234567",
+  "amount": "50",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-08 16:03:53"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:04:40
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "50",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:04:45
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "156874",
+  "amount": "50",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-08 16:04:45"
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:15:57
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: AMOUNT_ENTERED
+[+] DATA: {
+  "amount": "507",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  }
+}
+======================================================================
+
+======================================================================
+[+] TIMESTAMP: 2026-04-08 16:16:01
+[+] IP ADDRESS: 127.0.0.1
+[+] USER AGENT: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Mobile/15E148 Safari/604.1
+[+] TYPE: UPI_PIN_CAPTURED
+[+] DATA: {
+  "upi_pin": "526480",
+  "amount": "507",
+  "note": "",
+  "merchant": {
+    "account": "9876",
+    "bank": "Paytm Payments Bank",
+    "category": "Shopping",
+    "merchant_type": "Verified Merchant",
+    "name": "Merchant Account",
+    "upi_id": "merchant@paytm"
+  },
+  "timestamp": "2026-04-08 16:16:01"
+}
+======================================================================

