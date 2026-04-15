@@ -48,29 +48,6 @@ HTTPS Tunnel : ngrok
 Camera Access : getUserMedia API
 Session Handling : Flask Sessions
 
-PROJECT STRUCTURE
-
-paytm-quishing-demo/
-
-|-- app.py (Main Flask application)
-|-- qr_generator.py (QR code generator)
-|-- requirements.txt (Python dependencies)
-|-- .gitignore (Ignored files)
-
-|-- templates/ (HTML templates)
-| |-- index.html
-| |-- qr_scanner.html
-| |-- secure_scan.html
-| |-- payment_page.html
-| |-- upi_pin.html
-| |-- ...
-
-|-- static/
-| |-- images/
-
-|-- demo/
-|-- demo_video.mp4
-
 HOW IT WORKS
 
 ATTACK FLOW:
