@@ -92,5 +92,3 @@ Open the ngrok URL on your phone and scan the generated QR code.
 ## Note
 
 Built to demonstrate real-world phishing risks and promote secure QR scanning practices.
-
-readme ye edit kardo agar sahi lag rha ho to
