@@ -1,115 +1,96 @@
-**This project is for Educational Demo Only**
+# Quishing & Session Hijacking Demo
 
-PROJECT OVERVIEW
+## Disclaimer
 
-This project demonstrates a complete Quishing (QR Code Phishing) attack combined with Session Hijacking, along with a defensive mechanism called "Secure Scan".
+This project is for educational purposes only. It demonstrates phishing risks and defensive techniques. Do not use it for malicious activities.
 
-What is Quishing?
-Quishing = QR Code + Phishing
+---
 
-Attackers generate malicious QR codes that appear legitimate. When scanned, they redirect users to fake websites designed to steal sensitive information such as:
+## Overview
 
-UPI PINs
-Session tokens
-Login credentials
-WHAT THIS PROJECT DEMONSTRATES
+This project showcases a **Quishing (QR Code Phishing) attack** combined with **Session Hijacking**, along with a protection system called **Secure Scan**.
 
-ATTACK SIMULATION:
+**Quishing** involves malicious QR codes that redirect users to fake websites to steal:
 
-Realistic Paytm UI clone
-Malicious QR code generation with branding
-Fake payment flow (Amount → PIN → Success)
-Credential capture system
-Session token theft simulation
-Attacker dashboard
+* UPI PINs
+* Login credentials
+* Session tokens
 
-PROTECTION MECHANISM (SECURE SCAN):
+---
 
-Secure QR scanner with threat detection
-URL pattern analysis
-Domain verification (paytm.com only)
-Risk scoring system (Threshold: 50 points)
-Real-time phishing alerts
-Reporting mechanism
-UI FEATURES
-Balance hide/show toggle
-Transaction history
-Mobile recharge and bill payments
-Bank transfer simulation
-Bottom navigation:
-Pay | Cashback | Shopping | Credit Card | Loan
-TECH STACK
+## Features
 
-Backend : Python 3.7+, Flask
-Frontend : HTML5, CSS3, JavaScript (ES6)
-QR Generation : qrcode, Pillow (PIL)
-QR Scanning : jsQR Library
-HTTPS Tunnel : ngrok
-Camera Access : getUserMedia API
-Session Handling : Flask Sessions
+### Attack Simulation
 
-HOW IT WORKS
+* Paytm-like UI clone
+* Malicious QR code generation
+* Fake payment flow
+* Credential & session capture
+* Attacker dashboard
 
-ATTACK FLOW:
+### Secure Scan (Defense)
 
-Attacker generates a malicious QR code
-Victim scans the QR code
-Redirects to fake Paytm page
-Victim enters payment details
-Credentials and session token are captured
-Attacker reuses session (Session Hijacking)
+* QR threat detection
+* URL & domain verification
+* Risk scoring (threshold: 50)
+* Real-time alerts & blocking
 
-PROTECTION FLOW:
+---
 
-User scans QR using Secure Scan
-System analyzes:
-URL pattern
-Domain authenticity
-Risk score
-If risk exceeds threshold:
-Alert is shown
-Access is blocked
+## Tech Stack
 
-DEMO
-Location: /demo/demo_video.mp4
+* **Backend:** Python, Flask
+* **Frontend:** HTML, CSS, JavaScript
+* **Tools:** qrcode, Pillow, jsQR, ngrok
 
-Installation & Setup
+---
+
+## Working
+
+**Attack Flow:**
+QR → Fake Page → User Input → Data Capture → Session Hijack
+
+**Protection Flow:**
+Scan → Analyze URL & Domain → Risk Score → Alert/Block
+
+---
+
+## Setup
 
 ### Prerequisites
 
-- Python 3.7 or higher
-- pip package manager
-- ngrok account (free) - https://ngrok.com)
-- iPhone or Android phone (for testing)
-- Same WiFi network for laptop and phone
+* Python 3.7+
+* pip
+* ngrok
 
-### Step 1: Clone the Repository
+### Installation
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/paytm-quishing-demo.git
 cd paytm-quishing-demo
-
-Step 2: Install Dependencies
 pip install -r requirements.txt
+```
 
-Step 3: Start ngrok (New Terminal)
+### Run
+
+```bash
 ngrok http 5000
-Copy the HTTPS URL (e.g., https://abc123.ngrok.io)
-
-Step 4: Start Flask Server (New Terminal)
 python app.py
-
-Step 5: Generate Malicious QR Code (New Terminal)
 python qr_generator.py
+```
 
-Step 6: On iPhone
-Open Chrome browser
-Go to your ngrok HTTPS URL
-Tap Share → Add to Home Screen → Name "Paytm"
-Open from home screen
-Tap "Scan QR Code" → "Start Camera"
-Scan the QR code on laptop
-Enter amount () and UPI PIN ()
-Check terminal - PIN captured!
+Open the ngrok URL on your phone and scan the generated QR code.
 
-This project is for Educational Demo Only
+---
+
+## Demo
+
+`/demo/demo_video.mp4`
+
+---
+
+## Note
+
+Built to demonstrate real-world phishing risks and promote secure QR scanning practices.
+
+readme ye edit kardo agar sahi lag rha ho to
